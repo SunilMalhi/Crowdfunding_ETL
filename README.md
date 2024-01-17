@@ -1,1 +1,4 @@
-# Crowdfunding_ETL
+# Crowdfunding ETL Mini Project
+
+## Project Summary
+

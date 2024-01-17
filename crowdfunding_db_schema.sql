@@ -2,7 +2,7 @@
 -- Link to schema: https://app.quickdatabasediagrams.com/#/d/7mtFbP
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
-
+-- create contacts table with primary key
 CREATE TABLE "Category" (
     "category_id" VARCHAR(6)   NOT NULL,
     "category" VARCHAR(30)   NOT NULL,
@@ -14,6 +14,7 @@ CREATE TABLE "Category" (
     )
 );
 
+-- create subcategory table with primary key
 CREATE TABLE "Subcategory" (
     "subcategory_id" VARCHAR(9)   NOT NULL,
     "subcategory" VARCHAR(30)   NOT NULL,
@@ -25,13 +26,25 @@ CREATE TABLE "Subcategory" (
     )
 );
 
+-- create contacts table with primary key
+CREATE TABLE "Contacts" (
+    "contact_id" int   NOT NULL,
+    "first_name" VARCHAR(40)   NOT NULL,
+    "last_name" VARCHAR(40)   NOT NULL,
+    "email" VARCHAR(50)   NOT NULL,
+    CONSTRAINT "pk_Contacts" PRIMARY KEY (
+        "contact_id"
+     )
+);
+
+-- create campaign table with primary key
 CREATE TABLE "Campaign" (
     "cf_id" int   NOT NULL,
     "contact_id" int   NOT NULL,
     "company_name" VARCHAR(80)   NOT NULL,
     "description" VARCHAR(120)   NOT NULL,
-    "goal" int   NOT NULL,
-    "pledged" int   NOT NULL,
+    "goal" DECIMAL (11, 2)   NOT NULL,
+    "pledged" DECIMAL (11, 2)   NOT NULL,
     "outcome" VARCHAR(11)   NOT NULL,
     "backers_count" int   NOT NULL,
     "country" VARCHAR(3)   NOT NULL,
@@ -45,16 +58,7 @@ CREATE TABLE "Campaign" (
      )
 );
 
-CREATE TABLE "Contacts" (
-    "contact_id" int   NOT NULL,
-    "first_name" VARCHAR(40)   NOT NULL,
-    "last_name" VARCHAR(40)   NOT NULL,
-    "email" VARCHAR(50)   NOT NULL,
-    CONSTRAINT "pk_Contacts" PRIMARY KEY (
-        "contact_id"
-     )
-);
-
+-- add constraints to campaign table for foreign keys
 ALTER TABLE "Campaign" ADD CONSTRAINT "fk_Campaign_contact_id" FOREIGN KEY("contact_id")
 REFERENCES "Contacts" ("contact_id");
 
@@ -64,7 +68,8 @@ REFERENCES "Category" ("category_id");
 ALTER TABLE "Campaign" ADD CONSTRAINT "fk_Campaign_subcategory_id" FOREIGN KEY("subcategory_id")
 REFERENCES "Subcategory" ("subcategory_id");
 
-select * from contacts
-select * from category
-select * from subcategory
-select * from campaign
+-- select data from tables
+select * from "Category";
+select * from "Subcategory";
+select * from "Contacts";
+select * from "Campaign";

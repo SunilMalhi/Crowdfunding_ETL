@@ -11,7 +11,7 @@ The aim of this project is collaborating using crowdfunding data to build an ETL
 * PostgreSQL
 
 ## Project Outline
-The mini project was divided into four subsections:
+The project was divided into four subsections:
 * Create the Category and Subcategory DataFrames
 * Create the Campaign DataFrame
 * Create the Contacts DataFrame

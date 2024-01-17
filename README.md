@@ -17,6 +17,11 @@ The project was divided into four subsections:
 * Create the Contacts DataFrame
 * Create the Crowdfunding Database
 
+## Repositary Structure
+* Files Folder: Notebook files for subsections
+* Images Folder: Screenshots of databases and QBDB
+* Resources Folder: dataset files
+
 ## Collaborators
 * [Ammarah](/https://github.com/Amarah010)
 * [Kashfi](/https://github.com/kashfi-khalid)

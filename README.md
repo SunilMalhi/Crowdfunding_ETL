@@ -4,13 +4,13 @@
 The aim of this project is collaborating using crowdfunding data to build an ETL pipeline using Python, Pandas and PostgreSQL so we can create an Entity Relationship Diagram (ERD), a table schema and a Postgres database.
 
 ## Packages
-### Jupyter Notebook
-### Pandas
-### Python
-### QuickDBD
-### PostgreSQL
+Jupyter Notebook
+Pandas
+Python
+QuickDBD
+PostgreSQL
 
 ## Collaborators
-### Amarah010
-###  kashfi-khalid
-### SunilMalhi
+Ammarah
+Kashfi
+Sunil
